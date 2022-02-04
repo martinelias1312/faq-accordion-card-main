@@ -85,10 +85,13 @@ details p {
 
 summary {
     color: var(--Neutral-color-Very-dark-grayish-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 summary::marker {
-    display: none;
+    content: none;
 }
 
 summary:hover, summary:focus {
