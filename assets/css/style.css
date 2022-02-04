@@ -21,17 +21,21 @@ html {
 body {
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 12px;
-    height: 100vh;
     background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+main {
+    max-width: 100%;
+    width: 28em;
+}
+
 /* -- FAQ Card -- */
 article {
-    width: 25em;
     background: #fff;
     border-radius: 15px;
     display: flex;
@@ -63,7 +67,8 @@ article {
 /* -- Card heading and questions -- */
 .questions-container {
     width: 85%;
-    margin-bottom: 3em;
+    margin-bottom: 5em;
+    font-size: 1.1em;
 }
 
 h1 {
@@ -94,7 +99,7 @@ summary::marker {
     content: none;
 }
 
-summary:hover, summary:focus {
+summary:hover {
     color: var(--Primary-color-Soft-red);
 }
 
