@@ -34,11 +34,20 @@ article {
     width: 27em;
     background: #fff;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 /* Images */
-.mobile {
+#mobile-img {
     position: relative;
-    top: 5px;
+    top: -100px;
+    max-width: 19em;
+}
+
+#mobile-pattern {
+    position: absolute;
 }
 
 .desktop {
