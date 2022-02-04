@@ -31,7 +31,7 @@ body {
 
 /* -- FAQ Card -- */
 article {
-    width: 27em;
+    width: 25em;
     background: #fff;
     border-radius: 15px;
     display: flex;
@@ -40,14 +40,20 @@ article {
 }
 
 /* Images */
+.img-wrap {
+    max-height: 10em;
+}
+
 #mobile-img {
+    z-index: 2;
     position: relative;
-    top: -100px;
-    max-width: 19em;
+    bottom: 110px;
 }
 
 #mobile-pattern {
-    position: absolute;
+    z-index: 1;
+    position: relative;
+    bottom: 195px;
 }
 
 .desktop {
@@ -55,7 +61,44 @@ article {
 }
 
 /* -- Card heading and questions -- */
+.questions-container {
+    width: 85%;
+    margin-bottom: 3em;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--Primary-color-Very-dark-desaturated-blue);
+    margin-top: 0;
+}
+
+details {
+    border-bottom: 1px solid var(--Divider-color-Light-grayish-blue);
+    padding: 1em 0 1em;
+}
+
+details p {
+    line-height: 1.5em;
+    color: var(--Neutral-color-Dark-grayish-blue);
+}
+
+summary {
+    color: var(--Neutral-color-Very-dark-grayish-blue);
+}
+
+summary::marker {
+    display: none;
+}
+
+summary:hover, summary:focus {
+    color: var(--Primary-color-Soft-red);
+}
 
 /* Footer */
+footer {
+    margin-top: 1em;
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
