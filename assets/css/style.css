@@ -104,6 +104,10 @@ summary:hover {
     color: var(--Primary-color-Soft-red);
 }
 
+svg {
+    transition: transform 0.5s ease-in-out;
+}
+
 /* Footer */
 footer {
     margin-top: 1em;
