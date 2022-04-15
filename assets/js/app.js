@@ -8,7 +8,7 @@ const addListeners = (array, callback) => {
         item.addEventListener('click', (e) => {
             callback(e);
         })
-    })
+    })  
 };
 
 const showItem = (arrow, text) => {
@@ -29,7 +29,7 @@ const closeOthers = (details, summary, svg) => {
 }
 
 const handleClick = (e) => {
-    // clicked selectors
+    // clicked item selectors
     let clickedItem = e.target.closest('details');
     let arrow = clickedItem.querySelector('svg');
     let text = clickedItem.querySelector('summary');
@@ -46,3 +46,7 @@ const handleClick = (e) => {
 };
 
 addListeners(allSummary, handleClick)
+
+// open second question after page load
+showItem(allDetails[1].querySelector('svg'), allDetails[1].querySelector('summary'));
+allDetails[1].open = true;
