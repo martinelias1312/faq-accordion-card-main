@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 const allDetails = [...document.querySelectorAll('details')];
 const allSummary = [...document.querySelectorAll('summary')];
 const allSvg = [...document.querySelectorAll('svg')];
