@@ -1,5 +1,7 @@
 'use strict';
-const items = [...document.querySelectorAll('summary')];
+const allDetails = [...document.querySelectorAll('details')];
+const allSummary = [...document.querySelectorAll('summary')];
+const allSvg = [...document.querySelectorAll('svg')];
 
 const addListeners = (array, callback) => {
     array.forEach(item => {
@@ -10,11 +12,6 @@ const addListeners = (array, callback) => {
 };
 
 const handleClick = (e) => {
-    // all selectors 
-    let allDetails = [...document.querySelectorAll('details')];
-    let allSummary = [...document.querySelectorAll('summary')];
-    let allSvg = [...document.querySelectorAll('svg')];
-    
     // clicked selectors
     let clickedItem = e.target.closest('details');
     let arrow = clickedItem.querySelector('svg');
@@ -45,4 +42,4 @@ const handleClick = (e) => {
     }
 };
 
-addListeners(items, handleClick)
+addListeners(allSummary, handleClick)
