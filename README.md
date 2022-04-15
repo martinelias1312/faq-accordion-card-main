@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-faq-Bkm7ZrwNc](https://www.frontendmentor.io/solutions/responsive-faq-Bkm7ZrwNc)
 - Live Site URL: [https://faq-accordion-card-main-cyan.vercel.app/](https://faq-accordion-card-main-cyan.vercel.app/)
 
 ## My process
