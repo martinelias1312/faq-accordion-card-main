@@ -10,12 +10,16 @@ const addListeners = (array, callback) => {
 };
 
 const handleClick = (e) => {
+    // all selectors 
+    let allDetails = [...document.querySelectorAll('details')];
+    let allSummary = [...document.querySelectorAll('summary')];
+    let allSvg = [...document.querySelectorAll('svg')];
+    
+    // clicked selectors
     let clickedItem = e.target.closest('details');
     let arrow = clickedItem.querySelector('svg');
     let text = clickedItem.querySelector('summary');
-
-    let clickedItemActive = clickedItem.attributes; // touching details element NamedNodeMap
-
+    
     const showItem = (arrow, text) => {
         text.style.fontWeight = `700`;
         arrow.style.transform = `rotate(180deg)`;
@@ -26,11 +30,18 @@ const handleClick = (e) => {
         arrow.style.transform = `rotate(0deg)`;
     }
 
-    // condition when length == 0(details attribude open="") or when length == 1(details attribude open="")
-    if (clickedItemActive.length == 0) {
-        showItem(arrow, text)
+    const closeOthers = (details, summary, svg) => {
+        details.forEach(item => item.open = false);
+        summary.forEach(item => item.style.fontWeight = `500`);
+        svg.forEach(item => item.style.transform = `rotate(0deg)`);
+    }
+
+    // condition when clicked item is closed then open it
+    if (clickedItem.open == false) {
+        closeOthers(allDetails, allSummary, allSvg);
+        showItem(arrow, text);
     } else {
-        hideItem(arrow, text)
+        hideItem(arrow, text);
     }
 };
 
