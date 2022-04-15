@@ -102,6 +102,7 @@ summary::marker {
 
 summary:hover {
     color: var(--Primary-color-Soft-red);
+    cursor: pointer;
 }
 
 svg {
